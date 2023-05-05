@@ -91,7 +91,6 @@ class SRT_OT_CreateTargetBone(bpy.types.Operator):
             if not bone.use_deform or bone.name.upper().startswith("TGT-"):
                 continue
             tgt_bone_name = make_tgt_name(bone.name)
-            print(tgt_bone_name)
             
             if armature_data.edit_bones.get(tgt_bone_name):
                 # Bone already exists
@@ -106,6 +105,7 @@ class SRT_OT_CreateTargetBone(bpy.types.Operator):
                         setattr(tgt_bone, attr, getattr(bone, attr))
             
             tgt_bone.use_connect = False
+            tgt_bone.use_deform = False
             tgt_bone.layers = layers
             
             new_bones.append(tgt_bone)
