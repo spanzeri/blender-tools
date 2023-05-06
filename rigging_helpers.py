@@ -14,8 +14,6 @@ class SRT_PT_RiggingHelperPanel(bpy.types.Panel):
             row.label(text = "Not in armature edit mode", icon = "QUESTION")
             return
 
-        row.label(text = "Sample Text", icon = "TRACKER")
-        row = layout.row()
         row.operator("armature.create_target_bones")
 
 

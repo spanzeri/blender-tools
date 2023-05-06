@@ -1,5 +1,6 @@
 import bpy
 from . rigging_helpers import (SRT_PT_RiggingHelperPanel, SRT_OT_CreateTargetBone)
+from . root_properties import (SRT_PT_RootProperties)
 
 bl_info = {
     "name": "Sam's Rigging Helpers",
@@ -15,7 +16,8 @@ bl_info = {
 
 classes = (
     SRT_PT_RiggingHelperPanel,
-    SRT_OT_CreateTargetBone
+    SRT_OT_CreateTargetBone,
+    SRT_PT_RootProperties
 )
 
 
